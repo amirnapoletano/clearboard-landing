@@ -36,7 +36,13 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     sans-serif;
-  background: var(--bg-page);
+
+  /* Soft gradient background instead of flat gray */
+  background:
+    radial-gradient(circle at top left, #e5edff, transparent 55%),
+    radial-gradient(circle at bottom right, #fde7ff, transparent 55%),
+    var(--bg-page);
+
   color: var(--text-main);
   line-height: 1.6;
 }
@@ -174,7 +180,16 @@ body {
 }
 
 .btn-ghost:hover {
-  background: #f9fafb;
+  background: #f3f4ff;
+  border-color: #c7d2fe;
+  color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(148, 163, 184, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
 }
 
 .btn-small {
@@ -190,13 +205,14 @@ body {
    Hero
 ---------------------------- */
 .hero {
-  padding: 3.5rem 0 3rem;
+  /* Slightly more top / bottom breathing room */
+  padding: 3.8rem 0 3.4rem;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 2.4rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 2.8rem;          /* bit more space between copy and card */
   align-items: center;
 }
 
@@ -212,6 +228,13 @@ body {
   font-size: clamp(2.4rem, 4vw, 3rem);
   line-height: 1.05;
   margin: 0 0 1rem;
+}
+
+/* Slightly calmer hero text on very large screens */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
 }
 
 .hero-subtitle {
@@ -393,11 +416,20 @@ body {
 }
 
 .feature-card {
-  padding: 1.5rem 1.4rem;
+  padding: 1.6rem 1.6rem;
   background: var(--bg-surface);
   border-radius: 18px;
   box-shadow: var(--shadow-card);
   font-size: 0.94rem;
+
+  /* Subtle lift on hover */
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  background-color: #f9fafb;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
 }
 
 /* Steps */
@@ -412,9 +444,35 @@ body {
 .pricing-card {
   margin-top: 1.8rem;
   padding: 2.1rem 2rem;
-  background: var(--bg-surface);
+  background: radial-gradient(circle at top left, #e0edff, transparent 55%),
+    radial-gradient(circle at bottom right, #fef3ff, transparent 60%),
+    var(--bg-surface);
   border-radius: 22px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 26px 65px rgba(15, 23, 42, 0.16);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Very subtle top highlight line, like a “featured” plan */
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to right,
+    rgba(37, 99, 235, 0.42),
+    rgba(168, 85, 247, 0.32)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease;
+}
+
+/* On hover the gradient line appears soft */
+.pricing-card:hover::before {
+  opacity: 0.12;
 }
 
 .price {
@@ -512,6 +570,6 @@ body {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 }
