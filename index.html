@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Clearboard – Minimal analytics for growing SaaS products</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Optional: future JS (scroll, interactions, etc.) -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="page page-light">
+      <!-- =========================
+           Top navbar
+      ========================== -->
+      <header class="site-header">
+        <div class="container nav-container">
+          <a href="#" class="logo">
+            <span class="logo-mark">CB</span>
+            <span class="logo-text">
+              Clearboard
+              <span class="logo-sub">Analytics</span>
+            </span>
+          </a>
+
+          <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a href="#" class="nav-link">Log in</a>
+            <a href="#pricing" class="btn btn-small btn-primary">Start free</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- =========================
+             HERO – main pitch
+        ========================== -->
+        <section class="hero">
+          <div class="container hero-grid">
+            <!-- Left: copy -->
+            <div class="hero-copy">
+              <p class="eyebrow">CLEARBOARD · PRODUCT ANALYTICS</p>
+              <h1>
+                See what matters<br />
+                in your product in minutes.
+              </h1>
+              <p class="hero-subtitle">
+                Clearboard shows you what users do inside your app&nbsp;–
+                no complex dashboards, no setup headaches. Just the key
+                metrics your team needs each day.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary">
+                  Start free trial
+                </a>
+                <button class="btn btn-ghost">
+                  View sample dashboard
+                </button>
+              </div>
+
+              <div class="hero-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Setup time</span>
+                  <span class="meta-value">under 10 minutes</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Teams using Clearboard</span>
+                  <span class="meta-value">120+ SaaS products</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Plan</span>
+                  <span class="meta-value">first 14 days free</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: fake dashboard card -->
+            <aside class="hero-card" aria-hidden="true">
+              <div class="hero-card-header">
+                <span>Weekly product health</span>
+                <span class="status-pill">
+                  Live
+                </span>
+              </div>
+
+              <div class="hero-card-metrics">
+                <div class="metric">
+                  <span class="metric-label">Active users</span>
+                  <span class="metric-value">3,294</span>
+                  <span class="metric-trend trend-up">+18%</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-label">Feature adoption</span>
+                  <span class="metric-value">72%</span>
+                  <span class="metric-trend trend-up">+9%</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-label">Churn risk</span>
+                  <span class="metric-value">3.2%</span>
+                  <span class="metric-trend trend-down">–1.1%</span>
+                </div>
+              </div>
+
+              <div class="hero-card-chart">
+                <div class="chart-bar chart-bar-1"></div>
+                <div class="chart-bar chart-bar-2"></div>
+                <div class="chart-bar chart-bar-3"></div>
+                <div class="chart-bar chart-bar-4"></div>
+                <div class="chart-bar chart-bar-5"></div>
+              </div>
+
+              <div class="hero-card-footer">
+                <span class="small-label">Connected sources</span>
+                <div class="source-pills">
+                  <span>Web app</span>
+                  <span>Billing</span>
+                  <span>Support</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+        <section class="section" id="features">
+          <div class="container section-inner">
+            <header class="section-header">
+              <p class="eyebrow">Why Clearboard</p>
+              <h2>Analytics your team will actually open every day.</h2>
+              <p class="section-intro">
+                Instead of drowning you in hundreds of charts, Clearboard
+                focuses on three questions: who is using your product, which
+                features are working, and where users get stuck.
+              </p>
+            </header>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>Focused dashboards</h3>
+                <p>
+                  Curated views for product, growth, and support – so each team
+                  sees only what’s relevant for them.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <h3>Event tracking without chaos</h3>
+                <p>
+                  Ship events with simple naming rules and guardrails so your
+                  analytics stay clean as you grow.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <h3>Answers, not exports</h3>
+                <p>
+                  Clearboard highlights trends, anomalies, and segments so you
+                  don’t need to export to a spreadsheet every time.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+             HOW IT WORKS (placeholder)
+        ========================== -->
+        <section class="section" id="how-it-works">
+          <div class="container section-inner narrow">
+            <header class="section-header">
+              <p class="eyebrow">How it works</p>
+              <h2>Connect, ship events, share with the team.</h2>
+            </header>
+            <ol class="steps-list">
+              <li><strong>Connect your app</strong> using our SDK or Segment.</li>
+              <li>
+                <strong>Track a few key events</strong> like sign-ups, activations,
+                and upgrades.
+              </li>
+              <li>
+                <strong>Share Clearboard</strong> with product, growth, and support
+                so everyone sees the same picture.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- =========================
+             PRICING (simple placeholder)
+        ========================== -->
+        <section class="section" id="pricing">
+          <div class="container section-inner narrow">
+            <header class="section-header">
+              <p class="eyebrow">Pricing</p>
+              <h2>Start free, grow when it pays for itself.</h2>
+            </header>
+
+            <div class="pricing-card">
+              <h3>Product team plan</h3>
+              <p class="price">
+                €39 <span>/ month</span>
+              </p>
+              <p class="section-intro">
+                For early-stage SaaS teams who want clear product analytics
+                without spinning up a data team.
+              </p>
+              <ul class="pricing-list">
+                <li>Up to 5 team members</li>
+                <li>50k tracked users</li>
+                <li>All dashboards & exports</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#" class="btn btn-primary btn-full">
+                Start 14-day free trial
+              </a>
+              <p class="small-note">No credit card required.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+        <footer class="footer">
+          <div class="container footer-inner">
+            <p>© 2025 Clearboard Analytics · Concept by Amir Napoletano</p>
+            <div class="footer-links">
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
